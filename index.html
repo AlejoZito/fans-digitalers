@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fans</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/nav.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar_container">
+        <a href="#home" id="navbar_logo">fans</a>
+        <div class="navbar_toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar_menu">
+          <li class="navbar_item">
+            <a href="#home" class="navbar_links" id="home-page">Home</a>
+          </li>
+          <li class="navbar_item">
+            <a href="#lanzamientos" class="navbar_links" id="lanzamientos-page">Lanzamientos</a>
+          </li>
+          <li class="navbar_item">
+            <a href="#trivia" class="navbar_links" id="trivia-page"
+              >Trivia</a
+            >
+          </li>
+          <li class="navbar_btn">
+            <a href="#sign-up" class="button" id="signup">Participá</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+      <div class="hero_container">
+        <h1 class="hero_heading">Somos <span>fans</span></h1>
+        <p class="hero_description">y un sello discográfico</p>
+        <button class="main_btn"><a href="#lanzamientos">Explorar</a></button>
+      </div>
+    </div>
+
+    <!-- lanzamientos Section -->
+    <div class="lanzamientos" id="lanzamientos">
+      <h1>Últimos lanzamientos</h1>
+      <div class="lanzamientos_wrapper">
+        <div class="lanzamientos_card harry">
+          <h2>Harry's house</h2>
+          <p>Harry Styles</p>
+        </div>
+        <div class="lanzamientos_card daftpunk">
+          <h2>Discovery</h2>
+          <p>Daft Punk</p>
+        </div>
+        <div class="lanzamientos_card wos">
+          <h2>Caravana</h2>
+          <p>Wos</p>
+        </div>
+        <div class="lanzamientos_card taylor">
+          <h2>Red</h2>
+          <p>Taylor Swift</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- trivia Section -->
+    <div class="main" id="trivia">
+      <div class="main_container">
+        <div class="main_img--container">
+          <div class="main_img--card"><i class="fas fa-heart"></i></div>
+        </div>
+        <div class="main_content">
+          <h1>¡Quiero ser parte!</h1>
+          <h2>Demostrá qué tan fan sos</h2>
+          <p>Completa la trivia y participá por entradas <i class="fas fa-tickets"></i></p>
+          <button class="main_btn"><a href="#">Participá</a></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer_container">
+      <div class="footer_links">
+        <div class="footer_link--wrapper">
+          <div class="footer_link--items">
+            <h2>Nosotros</h2>
+            <a href="#">Cómo funciona</a>
+            <a href="#">Testimonios</a>
+            <a href="#">Carreras</a> 
+            <a href="#">Términos y condiciones</a>
+          </div>
+          <div class="footer_link--items">
+            <h2>Contactanos</h2>
+            <a href="#">Contacto</a> 
+            <a href="#">Soporte</a>
+            <a href="#">Destinos</a>
+          </div>
+        </div>
+        <div class="footer_link--wrapper">
+          <div class="footer_link--items">
+            <h2>Videos</h2>
+            <a href="#">Subí tu video</a> 
+            <a href="#">Embajadores</a>
+            <a href="#">Agencia</a>
+          </div>
+          <div class="footer_link--items">
+            <h2>Redes sociales</h2>
+            <a href="#">Instagram</a> 
+            <a href="#">Facebook</a>
+            <a href="#">Youtube</a> 
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </div>
+      <section class="social_media">
+        <div class="social_media--wrap">
+          <div class="footer_logo">
+            <a href="#" id="footer_logo">fans</a>
+          </div>
+          <p class="website_rights">© fans 2022. All rights reserved</p>
+          <div class="social_icons">
+            <a href="#" class="social_icon--link" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="social_icon--link"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="social_icon--link"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="#" class="social_icon--link"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="social_icon--link"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
