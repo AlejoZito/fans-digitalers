@@ -1,27 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap');
 
-html{
-    --main-font-color: #b9b5b5;
-    --separator-color: #313131;
-    background-color: #0e0e0e;
-}
-
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
   scroll-behavior: smooth;
 }
 
-/* Hero Section */
-.hero {
+body {
+    background-color: #0e0e0e;
+}
+
+/* Home Section */
+.home {
   background: #000000;
   background: linear-gradient(to right, #161616, #000000);
   padding: 200px 0;
 }
 
-.hero_container {
+.home_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,13 +29,13 @@ html{
   padding: 30px;
 }
 
-.hero_heading {
+.home_heading {
   font-size: 100px;
   margin-bottom: 24px;
   color: #fff;
 }
 
-.hero_heading span {
+.home_heading span {
   background: #ee0979; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -57,7 +54,7 @@ html{
   -mo-text-fill-color: transparent;
 }
 
-.hero_description {
+.home_description, .trivia .question {
   font-size: 60px;
   background: #da22ff; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -77,21 +74,14 @@ html{
   -moz-text-fill-color: transparent;
 }
 
+.trivia .question {
+  font-size: 35px;
+}
+
 .highlight {
   border-bottom: 4px solid rgb(132, 0, 255);
 }
 
-@media screen and (max-width: 768px) {
-  .hero_heading {
-    font-size: 60px;
-  }
-
-  .hero_description {
-    font-size: 40px;
-  }
-}
-
-/* trivia Section */
 .main {
   background-color: #131313;
   padding: 10rem 0;
@@ -165,11 +155,10 @@ html{
   margin-top: 2rem;
   cursor: pointer;
   position: relative;
-  transition: all 0.35s;
   outline: none;
 }
 
-.main_btn a {
+.main_btn a, .main_btn span {
   position: relative;
   z-index: 2;
   color: #fff;
@@ -222,78 +211,7 @@ html{
   background: linear-gradient(to right, #dd2476, #ff512f);
 }
 
-/* Mobile Responsive */
-@media screen and (max-width: 1100px) {
-  .main_container {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-    height: 90%;
-  }
-
-  .main_img--container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .main_img--card {
-    height: 425px;
-    width: 425px;
-  }
-
-  .main_content {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  .main_content h1 {
-    font-size: 2.5rem;
-    margin-top: 2rem;
-  }
-
-  .main_content h2 {
-    font-size: 3rem;
-  }
-
-  .main_content p {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .main_img--card {
-    width: 250px;
-    height: 250px;
-  }
-
-  .fa-users,
-  .fa-layer-group {
-    font-size: 4rem;
-  }
-
-  .main_content h1 {
-    font-size: 2rem;
-    margin-top: 3rem;
-  }
-  .main_content h2 {
-    font-size: 2rem;
-  }
-
-  .main_content p {
-    margin-top: 2rem;
-  }
-
-  .main_btn {
-    padding: 12px 36px;
-    margin: 2.5rem 0;
-  }
-}
-
-/* lanzamientos Section */
+/* Lanzamientos Section */
 .lanzamientos {
   background: #131313;
   display: flex;
@@ -304,7 +222,7 @@ html{
   padding: 10rem 0;
 }
 
-.lanzamientos h1 {
+.lanzamientos h1, .trivia h1 {
   background-color: #ff8177;
   background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
   background-size: 100%;
@@ -386,18 +304,6 @@ html{
   transform: scale(1.075);
   transition: 0.3s ease-in;
   cursor: pointer;
-}
-
-@media screen and (max-width: 1300px) {
-  .lanzamientos_wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .lanzamientos_wrapper {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Footer CSS */
@@ -487,32 +393,119 @@ html{
   color: #fff;
 }
 
-@media screen and (max-width: 820px) {
-  .footer_links {
-    padding-top: 2rem;
-  }
+/* Trivia section */
 
-  #footer_logo {
-    margin-bottom: 2rem;
-  }
-
-  .website_rights {
-    margin-bottom: 2rem;
-  }
-
-  .footer_link--wrapper {
-    flex-direction: column;
-  }
-
-  .social_media--wrap {
-    flex-direction: column;
-  }
+.option input[type=radio] {
+  display: none;
 }
 
-@media screen and (max-width: 480px) {
-  .footer_link--items {
-    margin: 0;
-    padding: 10px;
-    width: 100%;
-  }
+.option label {
+  border-radius: 10px;
+  background: #da22ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #9114ff,
+    #da22ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #8f0eff,
+    #da22ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  padding: 20px;
+  margin: 0 10px;
+  height: 100%;
+  text-transform: uppercase;
+}
+
+.option input[type="radio"]:checked + label {
+  background: linear-gradient(#ff9933, #cc6600); 
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.option {
+  height: 60px;
+  margin: 5px 0;
+}
+
+.option label:hover {
+  cursor:pointer;
+}
+
+.question {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.trivia-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.trivia input[type=text] {
+  height:50px;
+  width:99%;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 0px 2px;
+}
+
+.trivia .send { 
+  margin: 50px 0;
+}
+
+.send-buttons {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.send .button {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.send .main_btn {
+  margin-top: 0px;
+}
+
+.trivia input:required:invalid {
+border: 1px solid red;
+}
+
+.trivia .required {
+  border: 2px solid red;
+  animation: move-required 0.1s 2;
+}
+
+@keyframes move-required {
+  0% { transform: translate(10px, 0px); }
+  50% { transform: translate(-20px, 0px); }
+  100% { transform: translate(20px, 0px); }
+}
+
+.incorrect {
+  background: linear-gradient(
+    to right,
+    #ff5101,
+    #aa1414
+  ) !important;
+}
+
+.correct {
+  background: linear-gradient(
+    to right,
+    #2eac34,
+    rgb(24, 87, 65)
+  ) !important;
 }
